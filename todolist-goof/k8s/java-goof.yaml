@@ -5,7 +5,7 @@ metadata:
   labels:
     app: goof
   name: goof
-  namespace: default
+  namespace: java-goof
 spec:
   replicas: 1
   selector:
@@ -17,7 +17,7 @@ spec:
         app: goof
     spec:
       containers:
-      - image: ${DOCKER_ACCOUNT}/java-goof:latest
+      - image: 775287186221.dkr.ecr.eu-west-2.amazonaws.com/eksworkshop-java2:latest
         imagePullPolicy: Always
         name: java-goof
         securityContext:
